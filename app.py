@@ -69,7 +69,7 @@ weak_areas = []
 if attendance_rate < 70:
     weak_areas.append("Low Attendance: Try to maintain at least 75%–85% attendance.")
 
-# Study hours per week
+# Study hours per weekma
 if study_hours_per_week < 10:
     weak_areas.append("Low Study Hours: Increase study time to at least 1–2 hours daily.")
 

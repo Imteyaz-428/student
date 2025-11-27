@@ -75,13 +75,17 @@ if not os.path.exists(MODEL_FILE):
     pipeline = build_pipeline(num_attribute, cat_attribute)
    
     student_prepared =pipeline.fit_transform(student_features)
-    model = RandomForestRegressor(random_state=42)
+    model = LinearRegression()
     model.fit(student_prepared, student_labels)
     
     joblib.dump(model, MODEL_FILE)
     joblib.dump(pipeline,PIPELINE_FILE)
     
+    
     print("model is trained. CONGRATS!")
+    
+    # print(student_prepared)
+
 else :   
     # INFERENCE PHASE
     model = joblib.load(MODEL_FILE)
